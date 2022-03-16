@@ -1,0 +1,33 @@
+{{define "content"}}
+<html>
+<style>
+
+  body{
+    background-image: url("img/bg.png") ;
+    background-size:cover;
+  }
+  div{
+    margin-top: 300px;
+  }
+</style>
+<body >
+<div align="center">
+
+  <h1>端口扫描器</h1>
+  <form action ="http://127.0.0.1:8080/process" method="post"
+        enctype="application/x-www-form-urlencoded">
+    <p>ip&nbsp;&nbsp;&nbsp;&nbsp;地址:<input type="text" name="ip" /></p>
+    <p>端口范围:<input type="text" name="portRange" /></p>
+    <p><input type="submit" /></p>
+  </form>
+  <ul>
+    <li></li>
+    {{range .}}
+    <li>{{.}}端口打开了</li>
+    {{end}}
+  </ul>
+</div>
+
+</body>
+</html>
+{{end}}

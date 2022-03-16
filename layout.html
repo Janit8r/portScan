@@ -1,0 +1,23 @@
+{{ define "layout" }}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scanner</title>
+</head>
+<style type="text/css">
+    body{
+        background-image: url("img/bg.png") ;
+        background-size:cover;
+    }
+</style>
+<body>
+
+<div class="container my-4">
+    {{ block "content" . }}
+    <h1 style="color: blue">Template not found!</h1>
+    {{ end }}
+</div>
+</body>
+</html>
+{{ end }}
